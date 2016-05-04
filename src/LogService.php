@@ -2,6 +2,7 @@
 
 namespace Laralog;
 
+use Illuminate\Config\Repository;
 use Monolog\Logger;
 
 /**
@@ -10,27 +11,46 @@ use Monolog\Logger;
  */
 class LogService
 {
-
-    private $handlers;
+    /**
+     * @var Logger
+     */
+    protected $logger;
+    /**
+     * @var Repository
+     */
+    private $config;
 
     /**
      * LogService constructor.
      * @param Logger $logger
-     * @param array $handlers
+     * @param Repository $config
      */
-    public function __construct(Logger $logger, array $handlers)
+    public function __construct(Logger $logger, Repository $config)
     {
         $this->logger = $logger;
-        $this->handlers = $handlers;
+        $this->config = $config;
     }
 
     /**
      * Push handlers onto Monolog
+     * @param array $handlers
+     * @throws Exceptions\UnknownHandlerException
      */
-    public function pushHandlers() {
-        foreach($this->handlers as $handlerName) {
-            $handler = HandlerFactory::make($handlerName);
+    public function pushHandlers(array $handlers = []) {
+        $factory = new HandlerFactory($this->config);
+
+        foreach($handlers as $handlerName) {
+            $handler = $factory->make($handlerName);
             $this->logger->pushHandler($handler);
         }
     }
+
+    /**
+     * @return Logger
+     */
+    public function getLogger()
+    {
+        return $this->logger;
+    }
+
 }

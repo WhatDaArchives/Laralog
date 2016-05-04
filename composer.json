@@ -17,5 +17,8 @@
     },
     "require": {
         "laravel/framework": "^5.2"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.5"
     }
 }

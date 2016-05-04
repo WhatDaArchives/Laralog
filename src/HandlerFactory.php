@@ -2,6 +2,7 @@
 
 namespace Laralog;
 
+use Illuminate\Config\Repository;
 use Laralog\Exceptions\UnknownHandlerException;
 
 /**
@@ -11,31 +12,45 @@ use Laralog\Exceptions\UnknownHandlerException;
 class HandlerFactory
 {
     /**
+     * @var Repository
+     */
+    private $config;
+
+    /**
+     * HandlerFactory constructor.
+     * @param Repository $config
+     */
+    public function __construct(Repository $config)
+    {
+        $this->config = $config;
+    }
+
+    /**
      * @param string $handler
      * @return \Monolog\Handler\SlackHandler
      * @throws UnknownHandlerException
      */
-    public static function make(string $handler)
+    public function make(string $handler)
     {
         $handler = ucwords($handler);
         $method = "make$handler";
 
-        if(!method_exists(__CLASS__, $method)) {
+        if(!method_exists($this, $method)) {
             throw new UnknownHandlerException("Unknown handler $handler");
         }
 
-        return self::$method();
+        return $this->{$method}();
     }
 
     /**
      * Create a new Slack handler
      * @return \Monolog\Handler\SlackHandler
      */
-    public static function makeSlack()
+    public function makeSlack()
     {
         $handler = new \Monolog\Handler\SlackHandler(
-            config('laralog.handlers.slack.api_key'),
-            config('laralog.handlers.slack.channel')
+            $this->config->get('laralog.handlers.slack.api_key'),
+            $this->config->get('laralog.handlers.slack.channel')
         );
         $handler->setFormatter(new \Monolog\Formatter\LineFormatter());
 
