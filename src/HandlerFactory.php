@@ -34,8 +34,8 @@ class HandlerFactory
     public static function makeSlack()
     {
         $handler = new \Monolog\Handler\SlackHandler(
-            config('laralog.drivers.slack.api_key'),
-            config('laralog.drivers.slack.channel')
+            config('laralog.handlers.slack.api_key'),
+            config('laralog.handlers.slack.channel')
         );
         $handler->setFormatter(new \Monolog\Formatter\LineFormatter());
 
