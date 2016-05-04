@@ -18,7 +18,7 @@ class LaralogServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/laralog.php' => config_path('laralog.php'),
+            __DIR__.'/../config/laralog.php' => config_path('laralog.php'),
         ]);
     }
 
@@ -30,7 +30,7 @@ class LaralogServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/laralog.php', 'laralog'
+            __DIR__.'/../config/laralog.php', 'laralog'
         );
     }
 }
