@@ -24,7 +24,7 @@ Instead, you may of course manually update your require block and run `composer 
 }
 ```
 
-Once Laravel GitHub is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
+Once Laralog is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
 * `Laralog\LaralogServiceProvider::class`
 
