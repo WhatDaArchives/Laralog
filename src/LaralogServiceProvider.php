@@ -32,5 +32,7 @@ class LaralogServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/laralog.php', 'laralog'
         );
+
+        dd(config('laralog.key'));
     }
 }
