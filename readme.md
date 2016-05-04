@@ -47,11 +47,8 @@ To add an environment configuration, add a key to the environment array, with th
 containing an array with the handlers you want to use, for example: 
 
 ```php
-<?php
-    return [
-        'environments' => [
-            'local' => ['slack']
-        ]
+    'environments' => [
+        'local' => ['slack']
     ]
 ``` 
 
@@ -63,13 +60,10 @@ the required information for it.
 #### Slack
 
 ```php
-<?php
-    return [
-        'handlers' => [
-            'slack' => [
-                'api_key' => 'YOUR_SLACK_API_KEY',
-                'channel' => '#general'
-            ]
+    'handlers' => [
+        'slack' => [
+            'api_key' => 'YOUR_SLACK_API_KEY',
+            'channel' => '#general'
         ]
     ]
 ``` 
@@ -88,13 +82,13 @@ Use the logging methods from Laravel as usual ;)
 
 ### Future Support
 
-- [] NativeMailerHandler
-- [] SwiftMailerHandler
-- [] HipChatHandler
-- [] NewRelicHandler
-- [] LogglyHandler
-- [] RollbarHandler
-- [] PushoverHandler
-- [] ChromePHPHandler
-- [] PHPConsoleHandler
-- [] BugsnagHandler
+- [ ] NativeMailerHandler
+- [ ] SwiftMailerHandler
+- [ ] HipChatHandler
+- [ ] NewRelicHandler
+- [ ] LogglyHandler
+- [ ] RollbarHandler
+- [ ] PushoverHandler
+- [ ] ChromePHPHandler
+- [ ] PHPConsoleHandler
+- [ ] BugsnagHandler
