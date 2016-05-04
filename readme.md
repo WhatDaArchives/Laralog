@@ -1,5 +1,7 @@
 # Laralog
 
+## Description 
+
 Setup your log handlers per environment in your Laravel application.
 
 **CURRENTLY UNDER DEVELOPMENT**
@@ -41,7 +43,7 @@ $ php artisan vendor:publish
 This will create a `config/laralog.php` file in your app that you can modify to set your configuration. 
 Also, make sure you check for changes to the original config file in this package between releases.
 
-### Add environment
+## Environments
 
 To add an environment configuration, add a key to the environment array, with the name of your environment and
 containing an array with the handlers you want to use, for example: 
@@ -52,12 +54,12 @@ containing an array with the handlers you want to use, for example:
     ]
 ``` 
 
-### Add a handler
+## Handlers
 
 To add a handler configuration, add a key to the handlers array, with the name of your handler and
 the required information for it. 
 
-#### Slack
+### Slack
 
 ```php
     'handlers' => [
