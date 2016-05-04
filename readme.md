@@ -1,4 +1,4 @@
-# Laralog SDK
+# Laralog
 
 Setup your log handlers per environment in your Laravel application.
 
