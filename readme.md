@@ -1,8 +1,8 @@
 # Laralog
-[![Packagist](https://img.shields.io/packagist/v/laralog/laralog.svg?maxAge=2592000)](https://packagist.org/packages/laralog/laralog)
-[![Packagist](https://img.shields.io/packagist/l/laralog/laralog.svg?maxAge=2592000)](https://packagist.org/packages/laralog/laralog)
-[![Packagist](https://img.shields.io/packagist/dt/laralog/laralog.svg?maxAge=2592000)](https://packagist.org/packages/laralog/laralog)
-[![Travis](https://img.shields.io/travis/whatdafox/laralog.svg?maxAge=2592000)](https://travis-ci.org/WhatDaFox/Laralog)
+[![Packagist](https://img.shields.io/packagist/v/Laralog/Laralog.svg?maxAge=2592000&style=flat-square)](https://packagist.org/packages/laralog/laralog)
+[![Packagist](https://img.shields.io/packagist/l/Laralog/Laralog.svg?maxAge=2592000&style=flat-square)](https://packagist.org/packages/laralog/laralog)
+[![Packagist](https://img.shields.io/packagist/dt/Laralog/Laralog.svg?maxAge=2592000&style=flat-square)](https://packagist.org/packages/laralog/laralog)
+[![Travis](https://img.shields.io/travis/WhatDaFox/Laralog.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/WhatDaFox/Laralog)
 
 ## Description 
 
