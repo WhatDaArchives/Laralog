@@ -35,7 +35,7 @@ return [
          * Slack integration
          * --------------------------------------------------------------------------
          *
-         *  To obtain an api key, visit: https://api.slack.com/web#auth
+         * To obtain an api key, visit: https://api.slack.com/web#auth
          *
          * IMPORTANT: You channel name must be prefixed the # symbol
          *
