@@ -1,0 +1,13 @@
+{
+    "name": "laralog/laralog",
+    "description": "Package to log straight into Laralog.io from a Laravel application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentin Prugnaud",
+            "email": "valentin@whatdafox.com"
+        }
+    ],
+    "require": {}
+}
