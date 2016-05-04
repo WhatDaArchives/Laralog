@@ -76,11 +76,9 @@ Use the logging methods from Laravel as usual ;)
 
 ## Currently Supported Handlers
 
-### Slack
-
 - [x] SlackHandler ([To generate a token on Slack](https://api.slack.com/web#auth))
 
-### Future Support
+## Future Support
 
 - [ ] NativeMailerHandler
 - [ ] SwiftMailerHandler
