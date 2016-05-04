@@ -1,10 +1,14 @@
 # Laralog SDK
 
-Package to log straight into Laralog.io from a Laravel application.
+Setup your log handlers per environment in your Laravel application.
 
 ## Installation
 
+`composer require laralog/laralog`
+
 ## Configuration
+
+
 
 ## Usage
 
