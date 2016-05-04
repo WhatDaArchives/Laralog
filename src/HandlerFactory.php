@@ -37,7 +37,7 @@ class HandlerFactory
             config('laralog.drivers.slack.api_key'),
             config('laralog.drivers.slack.channel')
         );
-        $handler->setFormatter(new \Monolog\Formatter\HtmlFormatter());
+        $handler->setFormatter(new \Monolog\Formatter\LineFormatter());
 
         return $handler;
     }

@@ -43,7 +43,8 @@ class LaralogServiceProvider extends ServiceProvider
     {
         $this->app->log->listen(function () {
             $service = new LogService(
-                $this->app->log->getMonolog(), config('laralog.handlers')
+                $this->app->log->getMonolog(),
+                config("laralog.environments.{$this->app->environment()}", [])
             );
 
             $service->pushHandlers();

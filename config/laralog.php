@@ -2,7 +2,9 @@
 
 return [
 
-    'handlers' => ['slack'],
+    'environments' => [
+        'local' => ['slack']
+    ],
 
     'drivers' => [
         'slack' => [
@@ -10,5 +12,5 @@ return [
             'channel' => '#general'
         ]
     ]
-    
+
 ];
