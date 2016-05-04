@@ -1,6 +1,7 @@
 {
     "name": "laralog/laralog",
-    "description": "Package to log straight into Laralog.io from a Laravel application",
+    "description": "Setup your log handlers per environment in your Laravel application.",
+    "keywords": ["logging", "monolog", "laravel"],
     "type": "library",
     "license": "MIT",
     "authors": [
