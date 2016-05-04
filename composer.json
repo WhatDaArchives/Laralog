@@ -9,5 +9,13 @@
             "email": "valentin@whatdafox.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Laralog\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "^5.2",
+        "illuminate/log": "^5.2"
+    }
 }
