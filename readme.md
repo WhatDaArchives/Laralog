@@ -30,9 +30,22 @@ Instead, you may of course manually update your require block and run `composer 
 }
 ```
 
+### Laravel 5.4+
+
+Package will be automatically discovered when running `composer update` or `php artisan package:discover`.
+
+### Laravel <= 5.4
+
 Once Laralog is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
-* `Laralog\LaralogServiceProvider::class`
+```php
+<?php 
+
+'providers' => [
+    ...
+    Laralog\LaralogServiceProvider::class,
+],
+```
 
 ## Configuration
 

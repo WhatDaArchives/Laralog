@@ -20,5 +20,12 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^2.5"
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laralog\\LaralogServiceProvider"
+            ]
+        }
+    },
 }
